@@ -8,7 +8,7 @@
 
 **Shop Sustainably. Live Responsibly.**
 
-![Green Cart Banner](https://via.placeholder.com/1200x300)
+![Image](https://github.com/user-attachments/assets/25ed8f50-cab5-41ea-a0df-83c57e53850b)
 
 ## 🌎 Vision
 
