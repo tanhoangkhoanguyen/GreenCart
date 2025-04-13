@@ -67,14 +67,15 @@ In a world overwhelmed by fast consumerism, Green Cart empowers people to shop m
 
 ## 📷 Screenshots
 
-<div style="display: flex; justify-content: space-between;">
-    <img src="https://via.placeholder.com/400x250" width="48%" alt="Product Analysis View" />
-    <img src="https://via.placeholder.com/400x250" width="48%" alt="Marketplace View" />
+<div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+  <img src="https://github.com/user-attachments/assets/4c66c398-6d9d-42ef-b35f-36d0fc890caf" width="48%" alt="Product Analysis View" />
+  <img src="https://github.com/user-attachments/assets/25ed8f50-cab5-41ea-a0df-83c57e53850b" width="48%" alt="Marketplace View" />
+
+  <img src="https://github.com/user-attachments/assets/9504421b-6c22-41cc-9e5a-804548f9eb60" width="48%" alt="Browser Extension" />
+  <img src="https://github.com/user-attachments/assets/41af453c-b97b-4f71-9d11-9e702f140eb9" width="48%" alt="Sustainability Comparison" />
+  
 </div>
-<div style="display: flex; justify-content: space-between; margin-top: 20px;">
-    <img src="https://via.placeholder.com/400x250" width="48%" alt="Browser Extension" />
-    <img src="https://via.placeholder.com/400x250" width="48%" alt="Sustainability Comparison" />
-</div>
+
 
 ## 🚀 Getting Started
 
