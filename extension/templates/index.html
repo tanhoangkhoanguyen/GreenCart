@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoScan - Image-Based Sustainability Analyzer</title>
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-leaf me-2"></i>EcoScan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#image-analysis">Image Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Browse Categories</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron p-4 bg-dark rounded">
+                    <h1 class="display-5">Image-Based Sustainability Analysis</h1>
+                    <p class="lead">Scan product images to analyze sustainability metrics and find eco-friendly alternatives with AI-powered insights.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Analysis Section -->
+        <section id="image-analysis" class="my-5">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white">
+                    <h3><i class="fas fa-camera me-2"></i>Analyze Product from Image</h3>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-3">Upload a photo of any product to analyze its sustainability factors and find eco-friendly alternatives.</p>
+                    <form id="image-analysis-form" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="product-image" class="form-label">Product Image</label>
+                            <input class="form-control" type="file" id="product-image" accept="image/*" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg w-100"><i class="fas fa-image me-2"></i>Analyze Image</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-4" id="image-analysis-results" style="display: none;">
+                <div class="card shadow">
+                    <div class="card-header bg-info text-white">
+                        <h3><i class="fas fa-magnifying-glass-chart me-2"></i>Sustainability Analysis Results</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="analysis-intro mb-4">
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i> 
+                                <strong>Powered by AI!</strong> 
+                                Our advanced AI has analyzed your product image for sustainability factors. View the detailed metrics below.
+                            </div>
+                        </div>
+                        <div id="image-analysis-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4" id="eco-alternatives-results" style="display: none;">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h3><i class="fas fa-leaf me-2"></i>Eco-Friendly Alternatives</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="eco-alternatives-intro mb-4">
+                            <div class="alert alert-success">
+                                <i class="fas fa-info-circle me-2"></i> 
+                                <strong>Sustainable Shopping Made Easy!</strong> 
+                                Below are eco-friendly alternatives specifically chosen for this product. These options feature more sustainable materials, ethical manufacturing, or other environmental benefits.
+                            </div>
+                        </div>
+                        <div id="eco-alternatives-content" class="row"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="my-5">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white">
+                    <h3><i class="fas fa-tags me-2"></i>Browse Eco-Friendly Products by Category</h3>
+                </div>
+                <div class="card-body">
+                    <div id="categories-list" class="row"></div>
+                </div>
+            </div>
+
+            <div class="mt-4" id="category-results" style="display: none;">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h3 id="category-title"><i class="fas fa-list me-2"></i>Category Products</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="category-intro mb-4">
+                            <div class="alert alert-success">
+                                <i class="fas fa-info-circle me-2"></i> 
+                                <strong>Browse Eco-Friendly Options!</strong> 
+                                These products are selected for their sustainable materials, ethical manufacturing, and overall environmental benefits.
+                            </div>
+                        </div>
+                        <div id="category-content" class="row"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-leaf me-2"></i>EcoScan - Image-Based Sustainability Analyzer</h5>
+                    <p>Powered by Gemini AI</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 EcoScan - All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
