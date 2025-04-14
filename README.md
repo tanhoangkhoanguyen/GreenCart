@@ -41,20 +41,19 @@ In a world overwhelmed by fast consumerism, Green Cart empowers people to shop m
 
 ### Frontend
 - **React 18** for a responsive and dynamic user interface
-- **Tailwind CSS** for modern, utility-first styling
+- **TailwindCSS** for modern, utility-first styling
 - **Redux** for state management
 - **React Router** for seamless navigation
 
 ### Backend
-- **NestJS** framework for scalable API development
-- **TypeScript** for type-safe code
+- **NextJS** framework for scalable API development
+- **JavaScript** for type-safe code
 - **MongoDB** for flexible data storage
-- **Swagger** for API documentation
+- **FastAPI** for communication between servers
 
 ### AI & Data Processing
 - **Google Gemini models** for intelligent product analysis
 - **Python** data processing pipeline
-- **BeautifulSoup & Scrapy** for efficient web scraping
 - **TensorFlow** for custom sustainability models
 
 ## 📊 How It Works
